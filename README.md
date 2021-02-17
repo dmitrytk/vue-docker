@@ -1,24 +1,15 @@
-# vue-docker
+# Vue + Nginx running on Docker
 
-## Project setup
+### Run locally
+
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Run in Docker container
 
-### Lints and fixes files
 ```
-npm run lint
+docker build -t vue .
+docker run -it -p 80:80 --rm --name vue vue
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
